@@ -1,0 +1,1525 @@
+--[[
+Made by:
+Vinegar#7722
+
+Open Source :)))
+]]
+
+if game.PlaceId == 3956818381 then
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Ninja Legends By Vinegar#7722", "BloodTheme")
+
+--Tabs
+local AutoTab = Window:NewTab("Autofarms")
+local StatTab = Window:NewTab("Stat Edit")
+local TpTab = Window:NewTab("Teleports")
+local Setting = Window:NewTab("Settings")
+
+--sections
+local AutofarmSection = AutoTab:NewSection("Regular Autofarm")
+local Autofarm2Section = AutoTab:NewSection("Auto Buyers")
+local Autofarm3Section = AutoTab:NewSection("Auto Sell")
+local StatSection = StatTab:NewSection("Islands")
+local TpSection = TpTab:NewSection("Valley Teleports")
+local Bosstp = TpTab:NewSection("Boss Teleports")
+local Traintp = TpTab:NewSection("Training Area Teleports")
+local Altartp = TpTab:NewSection("Altar Teleports")
+local Dojotp = TpTab:NewSection("Dojo Teleports")
+local IslandTp = TpTab:NewSection("Island Teleports")
+local FunTpSection = TpTab:NewSection("Other")
+local Settings = Setting:NewSection("Keybind")
+--funky
+Settings:NewKeybind("Change Keybind", "Does what you think it Does", Enum.KeyCode.F, function()
+	Library:ToggleUI()
+end)
+AutofarmSection:NewToggle("Auto Swing", "Swing for you", function(state)
+    if state then
+        getgenv().katanaswinger = true
+            while wait(0.1) do
+                if getgenv().katanaswinger == true then
+                    local A_1 = "swingKatana"
+                        local Event = game:GetService'Players'.LocalPlayer.ninjaEvent
+                    Event:FireServer(A_1)
+                end
+        end
+    else
+        getgenv().katanaswinger = false
+    end
+end)
+Autofarm3Section:NewToggle("Auto Sell", "Automatically Sells Ninjitsu for you", function(state)
+    if state then
+getgenv().sell = true
+while wait() do
+    if getgenv().sell == true then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(77.4037704, 3.22484112, -49.3583145)
+wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(136.094116, 28259.8945, 62.6110229)
+wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(77.4037704, 3.22484112, -49.3583145)
+wait(0.1)
+end
+end
+    else
+        getgenv().sell = false
+    end
+end)
+StatSection:NewButton("Unlock All Islands", "Unlocks all islands!", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(76.9001389, 768.050049, -122.4058)
+-- enchanted Island ^^^^
+wait(0.1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(216.519302, 2013.28064 , 260.23957)
+-- astral island ^^^^
+wait(0.1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(115.374611, 4047.74536 , 87.2717819)
+-- mystical island ^^^^
+wait(0.1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(114.914474, 5655.14551, 84.1291122)
+--space island ^^^^
+wait(0.1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(141.679077, 9284.95703, 75.6782074)
+--tundra island ^^^^
+wait(0.1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(136.215881, 13679.8105, 64.9978485)
+--eternal island ^^^^
+wait(0.1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(150.245163, 17699.2285, 86.1327362)
+--sandstorm island ^^^^
+wait(0.1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(138.809418, 24090.791, 68.196078)
+--thunderstorm island ^^^^
+wait(0.1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(136.094116, 28259.8945, 62.6110229)
+--Ancient Inferno island ^^^^
+wait(0.1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(135.186722, 39316.1367, 52.5010338)
+--mythical souls island
+
+end)
+FunTpSection:NewButton("Heaven", "Go to heaven", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5555.555, 999999999999.203, -2936)
+end)
+TpSection:NewButton("Spawn", "Go back to spawn", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(27.9264317, 3.19600391, 28.0142498)
+end)
+TpSection:NewButton("Island Portals", "Goes to portals in spawn", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-151.313171, 3.23800492, 32.5512505)
+end)
+TpSection:NewButton("Dojo Portals", "Goes to dojo portals in spawn", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(44.8976974, 2.99800396, -230.16481)
+end)
+Bosstp:NewButton("Eternal Boss", "Teleport to the Eternal Boss", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1054.70105, 124.349815, -349.392731)
+end)
+Bosstp:NewButton("Ancient Boss", "Teleport to the Ancient Boss", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(264.666016, 135.062469, 1685.40259)
+end)
+Bosstp:NewButton("Robot Boss", "Teleport to the Robot Boss", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(382.358795, 3.1380052, 121.759262)
+end)
+TpSection:NewButton("KOTH", "Teleport to the KOTH Hill", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(256.24234, 110.840775, -296.399506)
+end)
+Traintp:NewButton("Sword Of Legends (Light)", "Teleport to the training spot", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1848.80847, 46.1375885, -166.225128)
+end)
+Traintp:NewButton("Sword Of Ancients (Dark)", "Teleport to the training spot", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(667.1474,43.669548, 2432.47241)
+end)
+Altartp:NewButton("Altar Of Elements", "Teleport to the Altar Of Elements", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(731.174377, 126.98613, -5916.30469)
+end)
+Altartp:NewButton("Pet Cloning Altar", "Teleport to the Pet Cloning Altar", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4516.23291, 123.864243, 1400.14502)
+end)
+Dojotp:NewButton("Infinity Stats Dojo", "Teleport to the Infinity Stats Dojo", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4106.4043, 124.044853, -5897.74365)
+end)
+Traintp:NewButton("Zen Master's Blade (Light)", "Teleport to the Zen Master's Blade", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5019.13916, 39.7434044, 1608.53455)
+end)
+Traintp:NewButton("Fallen Infinity Blade (Dark)", "Teleport to the Fallen Infinity Blade", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1846.1698, 39.2416954, -6791.1582)
+end)
+FunTpSection:NewButton("Duel Arena", "Teleport to the Duel Arena", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-6551.43359, 111.865311, -563.28772)
+end)
+StatSection:NewButton("Open All Chests", "Only works if not on cooldown", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(34.4345644, 28262.5547, 56.677948)
+    wait(0.9)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(425.236389, 52728.3086, -43.0706062)
+    wait(0.9)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(432.732635, 66789.6172, -47.9738312)
+    wait(0.9)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(425.19223, 70392.8125, -46.5424843)
+    wait(0.9)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(435.811981, 74563.3516, -50.0800896)
+    wait(0.9)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(426.059479, 79867.1484, -44.0753555)
+    wait(0.9)
+end)
+IslandTp:NewButton("Astral Island", "Teleport to the Astral Island", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(216.519302, 2013.28064 , 260.23957)
+end)
+IslandTp:NewButton("Mystical Island", "Teleport to the Mystical Island", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(115.374611, 4047.74536 , 87.2717819)
+end)
+IslandTp:NewButton("Astral Island", "Teleport to the Astral Island", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(216.519302, 2013.28064 , 260.23957)
+end)
+IslandTp:NewButton("Space Island", "Teleport to the Space Island", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(114.914474, 5655.14551, 84.1291122)
+end)
+IslandTp:NewButton("Tundra Island", "Teleport to the Tundra Island", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(141.679077, 9284.95703, 75.6782074)
+end)
+IslandTp:NewButton("Eternal Island", "Teleport to the Eternal Island", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(136.215881, 13679.8105, 64.9978485)
+end)
+IslandTp:NewButton("Sandstorm Island", "Teleport to the Sandstorm Island", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(150.245163, 17699.2285, 86.1327362)
+end)
+IslandTp:NewButton("Thunderstorm Island", "Teleport to the Thunderstorm Island", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(138.809418, 24090.791, 68.196078)
+end)
+IslandTp:NewButton("Ancient Inferno Island", "Teleport to the Ancient Inferno Island", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(136.094116, 28259.8945, 62.6110229)
+end)
+IslandTp:NewButton("Midnight Shadow Island", "Teleport to the Midnight Shadow Island", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(144.285507, 33205.8008, 79.6025543)
+end)
+IslandTp:NewButton("Mythical Souls Island", "Teleport to the Mythical Souls Island", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(135.186722, 39316.1367, 52.5010338)
+end)
+Autofarm2Section:NewToggle("Auto Buy Swords", "Does what you think it does", function(state)
+    if state then
+        getgenv().buyAllSwords = true
+            while wait(1) do
+              if getgenv().buyAllSwords == true then
+                 local swordstring1 = "buyAllSwords"
+                    local swordstring2 = "Ground"
+                game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(niggastring1, niggastring2)
+              end
+        end
+    else
+        getgenv().buyAllSwords = false
+    end
+end)
+Autofarm2Section:NewToggle("Auto Buy Belts", "Does what you think it does", function(state)
+    if state then
+        getgenv().buybelt = true
+            while wait(1) do
+              if getgenv().buybelt == true then
+                local beltstring1 = "buyAllBelts"
+                    local beltstring2 = "Ground"
+                game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(beltstring1, beltstring2)
+              end
+        end
+    else
+        getgenv().buybelt = false
+    end
+end)
+Autofarm2Section:NewToggle("Auto Buy Skills", "Does what you think it does", function(state)
+    if state then
+        getgenv().buyskill = true
+            while wait(1) do
+              if getgenv().buyskill == true then
+                local skillstring = "buyAllSkills"
+                    local skillstring = "Ground"
+                game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(ohString1, ohString2)
+              end
+         end
+    else
+        getgenv().buyskill = false
+    end
+end)
+end
+
+if game.PlaceId == 5490351219 then
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Clicker Madness By Vinegar#7722", "BloodTheme")
+--tabs
+local AutoTab = Window:NewTab("Autofarms")
+local RebirthTab = Window:NewTab("Rebirths")
+local TeleportTab = Window:NewTab("Teleports")
+local StateditTab = Window:NewTab("Stat editor")
+local PurchaseTab = Window:NewTab("Purchase")
+local SettingsTab = Window:NewTab("Settings")
+
+--Sections
+local AutoSection = AutoTab:NewSection("Basic Autofarms")
+local AutoBossSection = AutoTab:NewSection("Boss Autofarm")
+local TpSection = AutoTab:NewSection("Teleport Autofarms")
+local TeleportSection = TeleportTab:NewSection("World Teleports")
+local basicStateditSection = StateditTab:NewSection("Basic Stats")
+local StateditSection = StateditTab:NewSection("Gold Gem Giver")
+local ClickEditSection = StateditTab:NewSection("Infinite stuff")
+local RebirthbuySection = RebirthTab:NewSection("Rebirth Buyer")
+local BuyRegUpgradesSection = PurchaseTab:NewSection("Gem Upgrades")
+local BuySpecialUpgradesSection = PurchaseTab:NewSection("Golden Gem Upgrades")
+local BuyEggSection = PurchaseTab:NewSection("Buy 1 Egg")
+local BuyEgg3Section = PurchaseTab:NewSection("Buy 3 Eggs")
+local AutoBuyEggSection = PurchaseTab:NewSection("Auto Egg Buyer")
+local autoRebirthbuySection = RebirthTab:NewSection("Auto Rebirth")
+local SettingsSection = SettingsTab:NewSection("Settings")
+
+--Functions
+AutoSection:NewToggle("Clicker Autofarm", "Autofarm that is x10", function(state)
+    if state then
+        getgenv().basicfarmer = true
+	while wait() do
+		if getgenv().basicfarmer == true then
+			game:service'ReplicatedStorage'.Aero.AeroRemoteServices.ClickService.Click:FireServer("100")
+		end
+	end
+        print("Toggle On")
+    else
+        getgenv().basicfarmer = false
+        print("Toggle Off")
+    end
+end)
+AutoSection:NewToggle("Auto Beast Mode", "Automatically goes into beast mode UwU", function(state)
+    if state then
+        getgenv().autobeast = true
+	while wait(2.5) do
+		if getgenv().autobeast == true then
+			local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.BeastModeService.Begin
+            Event:FireServer()
+		end
+	end
+        print("Toggle On")
+    else
+        getgenv().autobeast = false
+        print("Toggle Off")
+    end
+end)
+AutoBossSection:NewToggle("Auto Kill Boss", "Attacks boss at any distance", function(state)
+    if state then
+        getgenv().bossyfarmer = true
+	while wait() do
+		if getgenv().bossyfarmer == true then
+			local A_1 = "Karen Keyboard"
+                local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.CursorCannonService.FireBoss
+            Event:FireServer(A_1)
+		end
+	end
+        print("Toggle On")
+    else
+        getgenv().bossyfarmer = false
+        print("Toggle Off")
+    end
+end)
+RebirthbuySection:NewButton("1 Rebirth", "Purchases 1 rebirth", function()
+    local A_1 = 1
+        local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths
+            Event:FireServer(A_1)
+            print("Purchased")
+end)
+RebirthbuySection:NewButton("10 Rebirths", "Purchases 10 rebirths", function()
+    local A_1 = 10
+        local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths
+            Event:FireServer(A_1)
+            print("Purchased")
+end)
+RebirthbuySection:NewButton("100 Rebirths", "Purchases 100 rebirths", function()
+    local A_1 = 100
+        local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths
+            Event:FireServer(A_1)
+            print("Purchased")
+end)
+RebirthbuySection:NewButton("1k Rebirths", "Purchases 1k rebirths", function()
+    local A_1 = 1000
+        local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths
+            Event:FireServer(A_1)
+            print("Purchased")
+end)
+RebirthbuySection:NewButton("100k Rebirths", "Purchases 100k rebirths", function()
+    local A_1 = 100000
+        local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths
+            Event:FireServer(A_1)
+            print("Purchased")
+end)
+RebirthbuySection:NewButton("1m Rebirths", "Purchases 1m rebirths", function()
+    local A_1 = 1000000
+        local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths
+            Event:FireServer(A_1)
+            print("Purchased")
+end)
+RebirthbuySection:NewButton("100m Rebirths", "Purchases 100m rebirths", function()
+    local A_1 = 100000000
+        local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths
+            Event:FireServer(A_1)
+            print("Purchased")
+end)
+RebirthbuySection:NewButton("1b Rebirths", "Purchases 1b rebirths", function()
+    local A_1 = 1000000000
+        local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths
+            Event:FireServer(A_1)
+            print("Purchased")
+end)
+RebirthbuySection:NewButton("10b Rebirths", "Purchases 1b rebirths", function()
+    local A_1 = 10000000000
+        local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths
+            Event:FireServer(A_1)
+            print("Purchased")
+end)
+RebirthbuySection:NewButton("100b Rebirths", "Purchases 100b rebirths", function()
+    local A_1 = 100000000000
+        local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths
+            Event:FireServer(A_1)
+            print("Purchased")
+end)
+RebirthbuySection:NewButton("1t Rebirths", "Purchases 1t rebirths", function()
+    local A_1 = 1000000000000
+        local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths
+            Event:FireServer(A_1)
+            print("Purchased")
+end)
+autoRebirthbuySection:NewToggle("1 Rebirth", "Purchase 1 rebirth", function(state)
+    if state then
+    getgenv().Rebirth1 = true
+	while wait() do
+		if getgenv().Rebirth1 == true then
+			    local A_1 = 1
+                    local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths
+            Event:FireServer(A_1)
+		end
+	end
+        print("Toggle On")
+    else
+        getgenv().Rebirth1 = false
+        print("Toggle Off")
+    end
+end)
+autoRebirthbuySection:NewToggle("10 Rebirths", "Purchase 10 rebirths", function(state)
+    if state then
+    getgenv().Rebirth10 = true
+	while wait() do
+		if getgenv().Rebirth10 == true then
+			    local A_1 = 10
+                    local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths
+            Event:FireServer(A_1)
+		end
+	end
+        print("Toggle On")
+    else
+        getgenv().Rebirth10 = false
+        print("Toggle Off")
+    end
+end)
+autoRebirthbuySection:NewToggle("100 Rebirths", "Purchase 100 rebirth", function(state)
+    if state then
+    getgenv().Rebirth100 = true
+	while wait() do
+		if getgenv().Rebirth100 == true then
+			    local A_1 = 100
+                    local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths
+            Event:FireServer(A_1)
+		end
+	end
+        print("Toggle On")
+    else
+        getgenv().Rebirth100 = false
+        print("Toggle Off")
+    end
+end)
+autoRebirthbuySection:NewToggle("1k Rebirths", "Purchase 1k rebirths", function(state)
+    if state then
+    getgenv().Rebirth1k = true
+	while wait() do
+		if getgenv().Rebirth1k == true then
+			    local A_1 = 1000
+                    local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths
+            Event:FireServer(A_1)
+		end
+	end
+        print("Toggle On")
+    else
+        getgenv().Rebirth1k = false
+        print("Toggle Off")
+    end
+end)
+autoRebirthbuySection:NewToggle("100k Rebirths", "Purchase 100k rebirths", function(state)
+    if state then
+    getgenv().Rebirth100k = true
+	while wait() do
+		if getgenv().Rebirth100k == true then
+			    local A_1 = 100000
+                    local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths
+            Event:FireServer(A_1)
+		end
+	end
+        print("Toggle On")
+    else
+        getgenv().Rebirth100k = false
+        print("Toggle Off")
+    end
+end)
+autoRebirthbuySection:NewToggle("1m Rebirths", "Purchase 1m rebirths", function(state)
+    if state then
+    getgenv().Rebirth1m = true
+	while wait() do
+		if getgenv().Rebirth1m == true then
+			    local A_1 = 1000000
+                    local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths
+            Event:FireServer(A_1)
+		end
+	end
+        print("Toggle On")
+    else
+        getgenv().Rebirth1m = false
+        print("Toggle Off")
+    end
+end)
+
+autoRebirthbuySection:NewToggle("10m Rebirths", "Purchase 10m rebirths", function(state)
+    if state then
+    getgenv().Rebirth10m = true
+	while wait() do
+		if getgenv().Rebirth10m == true then
+			    local A_1 = 10000000
+                    local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths
+            Event:FireServer(A_1)
+		end
+	end
+        print("Toggle On")
+    else
+        getgenv().Rebirth10m = false
+        print("Toggle Off")
+    end
+end)
+autoRebirthbuySection:NewToggle("100m Rebirths", "Purchase 100m rebirths", function(state)
+    if state then
+    getgenv().Rebirth100m = true
+	while wait() do
+		if getgenv().Rebirth100m == true then
+			    local A_1 = 100000000
+                    local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths
+            Event:FireServer(A_1)
+		end
+	end
+        print("Toggle On")
+    else
+        getgenv().Rebirth100m = false
+        print("Toggle Off")
+    end
+end)
+autoRebirthbuySection:NewToggle("1b Rebirths", "Purchase 1b rebirths", function(state)
+    if state then
+    getgenv().Rebirth1b = true
+	while wait() do
+		if getgenv().Rebirth1b == true then
+			    local A_1 = 100000000
+                    local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths
+            Event:FireServer(A_1)
+		end
+	end
+        print("Toggle On")
+    else
+        getgenv().Rebirth1b = false
+        print("Toggle Off")
+    end
+end)
+autoRebirthbuySection:NewToggle("10b Rebirths", "Purchase 10b rebirths", function(state)
+    if state then
+    getgenv().Rebirth10b = true
+	while wait() do
+		if getgenv().Rebirth10b == true then
+			    local A_1 = 100000000
+                    local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths
+            Event:FireServer(A_1)
+		end
+	end
+        print("Toggle On")
+    else
+        getgenv().Rebirth10b = false
+        print("Toggle Off")
+    end
+end)
+autoRebirthbuySection:NewToggle("100b Rebirths", "Purchase 100b rebirths", function(state)
+    if state then
+    getgenv().Rebirth100b = true
+	while wait() do
+		if getgenv().Rebirth100b == true then
+			    local A_1 = 10000000000
+                    local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths
+            Event:FireServer(A_1)
+		end
+	end
+        print("Toggle On")
+    else
+        getgenv().Rebirth100b = false
+        print("Toggle Off")
+    end
+end)
+wait(0.2)
+game.StarterGui:SetCore("SendNotification", {
+Title = "Loaded!";
+Text = "This gui was made by Vinegar#7722 Have Fun!";
+Duration = 5;
+})
+autoRebirthbuySection:NewToggle("1t Rebirths", "Purchase 1t rebirths", function(state)
+    if state then
+    getgenv().Rebirth1t = true
+	while wait() do
+		if getgenv().Rebirth1t == true then
+			    local A_1 = 100000000
+                    local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths
+            Event:FireServer(A_1)
+		end
+	end
+        print("Toggle On")
+    else
+        getgenv().Rebirth1t = false
+        print("Toggle Off")
+    end
+end)
+TeleportSection:NewButton("Spawn", "Teleports", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.SpawnLocation.CFrame
+end)
+TeleportSection:NewButton("Desert", "Teleports", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Worlds.Desert.Teleport.CFrame
+end)
+TeleportSection:NewButton("Winter", "Teleports", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Worlds.Winter.Teleport.CFrame
+end)
+TeleportSection:NewButton("Lava", "Teleports", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Worlds.Lava.Teleport.CFrame
+end)
+TeleportSection:NewButton("Toxic", "Teleports", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Worlds.Toxic.Teleport.CFrame
+end)
+TeleportSection:NewButton("Ocean", "Teleports", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Worlds.Ocean.Teleport.CFrame
+end)
+TeleportSection:NewButton("Candy", "Teleports", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Worlds.Candy.Teleport.CFrame
+end)
+TeleportSection:NewButton("Space", "Teleports", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Worlds.Space.Teleport.CFrame
+end)
+TeleportSection:NewButton("Forest", "Teleports", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Worlds.Forest.Teleport.CFrame
+end)
+TeleportSection:NewButton("City", "Teleports", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Worlds.City.Teleport.CFrame
+end)
+TeleportSection:NewButton("Blocks", "Teleports", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Worlds.Blocks.Teleport.CFrame
+end)
+TeleportSection:NewButton("Future", "Teleports", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Worlds.Future.Teleport.CFrame
+end)
+TeleportSection:NewButton("Infinity", "Teleports", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Worlds.Infinity.Teleport.CFrame
+end)
+TeleportSection:NewButton("Moon", "Teleports", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Worlds.Moon.Teleport.CFrame
+end)
+TeleportSection:NewButton("Fire", "Teleports", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Worlds.Fire.Teleport.CFrame
+end)
+TeleportSection:NewButton("Dominus", "Teleports", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Worlds.Dominus.Teleport.CFrame
+end)
+TeleportSection:NewButton("Storm", "Teleports", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Worlds.Storm.Teleport.CFrame
+end)
+StateditSection:NewButton("10B Gold Gems", "Gives 10B SuperRebirths for free!", function()
+    local A_1 = 1
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths
+Event:FireServer(A_1)
+wait(0.0000001)
+local args = {
+    [1] = -1
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths:FireServer(unpack(args))
+wait(0.001)
+local args = {
+    [1] = -1 
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths:FireServer(unpack(args))
+wait(0.001)
+local args = {
+    [1] = -1 
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths:FireServer(unpack(args))
+wait(0.001)
+local args = {
+    [1] = -math.huge
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))
+wait(0.001)
+local args = {
+    [1] = 1e+300 
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths:FireServer(unpack(args))
+
+wait(0.001)
+local A_1 = 10000000000
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuySuperRebirths
+Event:FireServer(A_1)
+wait(1)
+
+end)
+StateditSection:NewButton("1B Gold Gems", "Gives 1B SuperRebirths for free!", function()
+    local A_1 = 1
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths
+Event:FireServer(A_1)
+wait(0.0000001)
+local args = {
+    [1] = -1
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths:FireServer(unpack(args))
+wait(0.001)
+local args = {
+    [1] = -1
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths:FireServer(unpack(args))
+wait(0.001)
+local args = {
+    [1] = -1
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths:FireServer(unpack(args))
+wait(0.001)
+local args = {
+    [1] = -math.huge
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))
+wait(0.001)
+local args = {
+    [1] = 1e+300
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths:FireServer(unpack(args))
+
+wait(0.001)
+local A_1 = 1000000000
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuySuperRebirths
+Event:FireServer(A_1)
+wait(1)
+
+end)
+StateditSection:NewButton("100m Gold Gems", "Gives 100m SuperRebirths for free!", function()
+    local A_1 = 1
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths
+Event:FireServer(A_1)
+wait(0.0000001)
+local args = {
+    [1] = -1
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths:FireServer(unpack(args))
+wait(0.001)
+local args = {
+    [1] = -1 
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths:FireServer(unpack(args))
+wait(0.001)
+local args = {
+    [1] = -1
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths:FireServer(unpack(args))
+wait(0.001)
+local args = {
+    [1] = -math.huge
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))
+wait(0.001)
+local args = {
+    [1] = 1e+300
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths:FireServer(unpack(args))
+
+wait(0.001)
+local A_1 = 100000000
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuySuperRebirths
+Event:FireServer(A_1)
+wait(1)
+
+end)
+StateditSection:NewButton("10m Gold Gems", "Gives 10m SuperRebirths for free!", function()
+    local A_1 = 1
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths
+Event:FireServer(A_1)
+wait(0.0000001)
+local args = {
+    [1] = -1
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths:FireServer(unpack(args))
+wait(0.001)
+local args = {
+    [1] = -1 
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths:FireServer(unpack(args))
+wait(0.001)
+local args = {
+    [1] = -1
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths:FireServer(unpack(args))
+wait(0.001)
+local args = {
+    [1] = -math.huge
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))
+wait(0.001)
+local args = {
+    [1] = 1e+300
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths:FireServer(unpack(args))
+
+wait(0.001)
+local A_1 = 10000000
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuySuperRebirths
+Event:FireServer(A_1)
+wait(1)
+
+end)
+StateditSection:NewButton("1m Gold Gems", "Gives 1m SuperRebirths for free!", function()
+    local A_1 = 1
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths
+Event:FireServer(A_1)
+wait(0.0000001)
+local args = {
+    [1] = -1
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths:FireServer(unpack(args))
+wait(0.001)
+local args = {
+    [1] = -1 
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths:FireServer(unpack(args))
+wait(0.001)
+local args = {
+    [1] = -1
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths:FireServer(unpack(args))
+wait(0.001)
+local args = {
+    [1] = -math.huge
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))
+wait(0.001)
+local args = {
+    [1] = 1e+300
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths:FireServer(unpack(args))
+
+wait(0.001)
+local A_1 = 1000000
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuySuperRebirths
+Event:FireServer(A_1)
+wait(1)
+
+end)
+basicStateditSection:NewSlider("Speed Changer", "Changes the LocalPlayers speed", 150, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+basicStateditSection:NewSlider("Jump Slider", "Changes localplayers jumppower", 500, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+ClickEditSection:NewButton("Infinite Clicks", "Gives player InfMe clicks", function()
+    local A_1 = 1
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths
+Event:FireServer(A_1)
+wait(0.00001)
+local args = {
+    [1] = -1 
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths:FireServer(unpack(args))
+wait(0.001)
+local args = {
+    [1] = -1 
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths:FireServer(unpack(args))
+wait(0.001)
+local args = {
+    [1] = -1 
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths:FireServer(unpack(args))
+wait(0.001)
+local args = {
+    [1] = -math.huge
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))
+end)
+ClickEditSection:NewButton("Infinite Gems/Rebirths", "Why are you looking in here?!?!?!", function()
+    local A_1 = 1
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths
+Event:FireServer(A_1)
+wait(0.00001)
+local args = {
+    [1] = -1 
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths:FireServer(unpack(args))
+wait(0.001)
+local args = {
+    [1] = -1 
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths:FireServer(unpack(args))
+wait(0.001)
+local args = {
+    [1] = -1 
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths:FireServer(unpack(args))
+wait(0.001)
+local args = {
+    [1] = -math.huge
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.ClickService.Click:FireServer(unpack(args))
+local args = {
+    [1] = 1e+300
+}
+
+game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.RebirthService.BuyRebirths:FireServer(unpack(args))
+wait(0.001)
+end)
+BuyEggSection:NewButton("Fire Egg", "Purchases 1 Fire Egg", function()
+local A_1 = "fire"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+end)
+BuyEggSection:NewButton("Ocean Egg", "Purchases 1 Ocean Egg", function()
+local A_1 = "ocean"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+end)
+BuyEggSection:NewButton("Candy Egg", "Purchases 1 Candy Egg", function()
+local A_1 = "candy"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+end)
+BuyEggSection:NewButton("Forest Egg", "Purchases 1 Forest Egg", function()
+local A_1 = "forest"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+end)
+BuyEggSection:NewButton("Valentines Egg", "Purchases 1 Valentines Egg", function()
+local A_1 = "valentines"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+end)
+BuyEggSection:NewButton("Storm Egg", "Purchases 1 Storm Egg", function()
+local A_1 = "storm"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+end)
+BuyEggSection:NewButton("Moon Egg", "Purchases 1 Moon Egg", function()
+local A_1 = "moon"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+end)
+BuyEggSection:NewButton("Space Egg", "Purchases 1 Space Egg", function()
+local A_1 = "space"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+end)
+BuyEggSection:NewButton("Future Egg", "Purchases 1 Future Egg", function()
+local A_1 = "future"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+end)
+BuyEggSection:NewButton("Toxic Egg", "Purchases 1 Toxic Egg", function()
+local A_1 = "toxic"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+end)
+BuyEggSection:NewButton("Winter Egg", "Purchases 1 Winter Egg", function()
+local A_1 = "winter"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+end)
+BuyEggSection:NewButton("Desert Egg", "Purchases 1 Desert Egg", function()
+local A_1 = "desert"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+end)
+BuyEggSection:NewButton("Dominus Egg", "Purchases 1 Dominus Egg", function()
+local A_1 = "dominus"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+end)
+BuyEggSection:NewButton("Infinity Egg", "Purchases 1 Infinity Egg", function()
+local A_1 = "infinity"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+end)
+BuyEggSection:NewButton("City Egg", "Purchases 1 City Egg", function()
+local A_1 = "city"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+end)
+BuyEggSection:NewButton("Lava Egg", "Purchases 1 Lava Egg", function()
+local A_1 = "lava"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+end)
+BuyEggSection:NewButton("Blocky Egg", "Purchases 1 Blocky Egg", function()
+local A_1 = "blocky"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+end)
+BuyEgg3Section:NewButton("Buy 3 Fire Eggs", "Purchases 3 Fire Eggs", function()
+local A_1 = "fire"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+wait(0.0000000000001)
+local A_1 = "fire"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+wait(0.0000000000001)
+local A_1 = "fire"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+end)
+BuyEgg3Section:NewButton("Buy 3 Ocean Eggs", "Purchases 3 Ocean Eggs", function()
+local A_1 = "ocean"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+wait(0.0000000000001)
+local A_1 = "ocean"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+wait(0.0000000000001)
+local A_1 = "ocean"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+end)
+BuyEgg3Section:NewButton("Buy 3 Candy Eggs", "Purchases 3 Candy Eggs", function()
+local A_1 = "candy"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+wait(0.0000000000001)
+local A_1 = "candy"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+wait(0.0000000000001)
+local A_1 = "candy"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+end)
+BuyEgg3Section:NewButton("Buy 3 Forest Eggs", "Purchases 3 Forest Eggs", function()
+local A_1 = "forest"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+wait(0.0000000000001)
+local A_1 = "forest"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+wait(0.0000000000001)
+local A_1 = "forest"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+end)
+BuyEgg3Section:NewButton("Buy 3 Valentines Eggs", "Purchases 3 Valentines Eggs", function()
+local A_1 = "valentines"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+wait(0.0000000000001)
+local A_1 = "valentines"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+wait(0.0000000000001)
+local A_1 = "valentines"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+end)
+BuyEgg3Section:NewButton("Buy 3 Storm Eggs", "Purchases 3 Storm Eggs", function()
+local A_1 = "storm"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+wait(0.0000000000001)
+local A_1 = "storm"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+wait(0.0000000000001)
+local A_1 = "storm"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+end)
+BuyEgg3Section:NewButton("Buy 3 Moon Eggs", "Purchases 3 Moon Eggs", function()
+local A_1 = "moon"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+wait(0.0000000000001)
+local A_1 = "moon"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+wait(0.0000000000001)
+local A_1 = "moon"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+end)
+BuyEgg3Section:NewButton("Buy 3 Space Eggs", "Purchases 3 Space Eggs", function()
+local A_1 = "space"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+wait(0.0000000000001)
+local A_1 = "space"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+wait(0.0000000000001)
+local A_1 = "space"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+end)
+BuyEgg3Section:NewButton("Buy 3 Future Eggs", "Purchases 3 Future Eggs", function()
+local A_1 = "future"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+wait(0.0000000000001)
+local A_1 = "future"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+wait(0.0000000000001)
+local A_1 = "future"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+end)
+BuyEgg3Section:NewButton("Buy 3 Toxic Eggs", "Purchases 3 Toxic Eggs", function()
+local A_1 = "toxic"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+wait(0.0000000000001)
+local A_1 = "toxic"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+wait(0.0000000000001)
+local A_1 = "toxic"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+end)
+BuyEgg3Section:NewButton("Buy 3 Winter Eggs", "Purchases 3 Winter Eggs", function()
+local A_1 = "winter"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+wait(0.0000000000001)
+local A_1 = "winter"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+wait(0.0000000000001)
+local A_1 = "winter"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+end)
+BuyEgg3Section:NewButton("Buy 3 Desert Eggs", "Purchases 3 Desert Eggs", function()
+local A_1 = "desert"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+wait(0.0000000000001)
+local A_1 = "desert"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+wait(0.0000000000001)
+local A_1 = "desert"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+end)
+BuyEgg3Section:NewButton("Buy 3 Dominus Eggs", "Purchases 3 Dominus Eggs", function()
+local A_1 = "dominus"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+wait(0.0000000000001)
+local A_1 = "dominus"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+wait(0.0000000000001)
+local A_1 = "dominus"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+end)
+BuyEgg3Section:NewButton("Buy 3 Infinity Eggs", "Purchases 3 Infinity Eggs", function()
+local A_1 = "infinity"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+wait(0.0000000000001)
+local A_1 = "infinity"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+wait(0.0000000000001)
+local A_1 = "infinity"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+end)
+BuyEgg3Section:NewButton("Buy 3 City Eggs", "Purchases 3 City Eggs", function()
+local A_1 = "city"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+wait(0.0000000000001)
+local A_1 = "city"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+wait(0.0000000000001)
+local A_1 = "city"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+end)
+BuyEgg3Section:NewButton("Buy 3 Lava Eggs", "Purchases 3 Lava Eggs", function()
+local A_1 = "lava"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+wait(0.0000000000001)
+local A_1 = "lava"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+wait(0.0000000000001)
+local A_1 = "lava"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+end)
+BuyEgg3Section:NewButton("Buy 3 Blocky Eggs", "Purchases 3 Blocky Eggs", function()
+local A_1 = "blocky"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+wait(0.0000000000001)
+local A_1 = "blocky"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+wait(0.0000000000001)
+local A_1 = "blocky"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+Event:FireServer(A_1)
+end)
+
+SettingsSection:NewKeybind("Set the GUI toggle", "You Should Know", Enum.KeyCode.F, function()
+	Library:ToggleUI()
+end)
+BuyRegUpgradesSection:NewToggle("Auto Purchase Click Multiply", "Purchases Click Multipliers perk", function(state)
+    if state then  
+        getgenv().clickmult = true
+        while wait() do
+            if getgenv().clickmult == true then
+                local A_1 = "ClickMultiply"
+                    local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.UpgradeService.BuyUpgrade
+                        Event:FireServer(A_1)
+                end
+        end
+    else
+        getgenv().clickmult = false
+    end
+end)
+BuyRegUpgradesSection:NewToggle("Auto Purchase Cursor Damage", "Purchases Cursor Damage perk", function(state)
+    if state then  
+        getgenv().clickdmg = true
+        while wait() do
+            if getgenv().clickdmg == true then
+                local A_1 = "CursorDamage"
+                    local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.UpgradeService.BuyUpgrade
+                Event:FireServer(A_1)
+            end
+        end
+    else
+        getgenv().clickdmg = false
+    end
+end)
+BuyRegUpgradesSection:NewToggle("Auto Purchase More Health", "Purchases Health perk", function(state)
+    if state then  
+        getgenv().hp = true
+        while wait() do
+            if getgenv().hp == true then
+                local A_1 = "Health"
+                    local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.UpgradeService.BuyUpgrade
+                Event:FireServer(A_1)
+            end
+        end
+    else
+        getgenv().hp = false
+    end
+end)
+BuyRegUpgradesSection:NewToggle("Auto Purchase Jump Power", "Purchases Jump perk", function(state)
+    if state then  
+        getgenv().jumppwr = true
+        while wait() do
+            if getgenv().jumppwr == true then
+                local A_1 = "JumpPower"
+                    local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.UpgradeService.BuyUpgrade
+                Event:FireServer(A_1)
+            end
+        end
+    else
+        getgenv().jumppwr = false
+    end
+end)
+BuyRegUpgradesSection:NewToggle("Auto Purchase more Pet Storage", "Purchases Pet Storage perk", function(state)
+    if state then  
+        getgenv().petstore = true
+        while wait() do
+            if getgenv().petstore == true then
+                local A_1 = "PetStorage"
+                    local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.UpgradeService.BuyUpgrade
+                Event:FireServer(A_1)
+            end
+        end
+    else
+        getgenv().petstore = false
+    end
+end)
+BuyRegUpgradesSection:NewToggle("Auto Purchase Speed Upgrade", "Purchases Speed perk", function(state)
+    if state then  
+        getgenv().speed = true
+        while wait() do
+            if getgenv().speed == true then
+                local A_1 = "WalkSpeed"
+                    local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.UpgradeService.BuyUpgrade
+                Event:FireServer(A_1)
+            end
+        end
+    else
+        getgenv().speed = false
+    end
+end)
+BuySpecialUpgradesSection:NewToggle("Auto Purchase Extra Boss Hits", "Purchases Boss Hit perk", function(state)
+    if state then  
+        getgenv().bossatk = true
+        while wait() do
+            if getgenv().bossatk == true then
+                local A_1 = "BossHit"
+                    local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.SuperUpgradeService.BuyUpgrade
+                Event:FireServer(A_1)
+            end
+        end
+    else
+        getgenv().bossatk = false
+    end
+end)
+BuySpecialUpgradesSection:NewToggle("Auto Purchase x2 Damage", "Purchases Double Damage perk", function(state)
+    if state then  
+        getgenv().doubledmg = true
+        while wait() do
+            if getgenv().doubledmg == true then
+                local A_1 = "DoubleDamage"
+                    local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.SuperUpgradeService.BuyUpgrade
+                Event:FireServer(A_1)
+            end
+        end
+    else
+        getgenv().doubledmg = false
+    end
+end)
+BuySpecialUpgradesSection:NewToggle("Auto Purchase x2 Health", "Purchases x2 Health perk", function(state)
+    if state then  
+        getgenv().doublehp = true
+        while wait() do
+            if getgenv().doublehp == true then
+                local A_1 = "DoubleHealth"
+                    local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.SuperUpgradeService.BuyUpgrade
+                Event:FireServer(A_1)
+            end
+        end
+    else
+        getgenv().doublehp = false
+    end
+end)
+BuySpecialUpgradesSection:NewToggle("Auto Purchase More Pet Slots", "Purchases Pet slots perk", function(state)
+    if state then  
+        getgenv().petslot = true
+        while wait() do
+            if getgenv().petslot == true then
+                local A_1 = "PetSlots"
+                    local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.SuperUpgradeService.BuyUpgrade
+                Event:FireServer(A_1)
+            end
+        end
+    else
+        getgenv().petslot = false
+    end
+end)
+BuySpecialUpgradesSection:NewToggle("Auto Purchase More Pet Storage", "Purchases Pet Storage perk", function(state)
+    if state then  
+        getgenv().petstore2 = true
+        while wait() do
+            if getgenv().petstore2 == true then
+                local A_1 = "PetStorage"
+                    local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.SuperUpgradeService.BuyUpgrade
+                Event:FireServer(A_1)
+            end
+        end
+    else
+        getgenv().petstore2 = false
+    end
+end)
+
+
+
+
+AutoBuyEggSection:NewToggle("Auto Fire Egg", "Auto Purchases a Fire egg", function(state)
+    if state then
+        getgenv().autofire = true
+        while wait(0.3) do
+            if getgenv().autofire == true then
+                local A_1 = "fire"
+                    local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+                Event:FireServer(A_1)
+            end
+        end
+    else
+        getgenv().autofire = false --this part sucks lol
+    end
+end)
+AutoBuyEggSection:NewToggle("Auto Ocean Egg", "Auto Purchases a Ocean egg", function(state)
+    if state then
+        getgenv().autoocean = true
+        while wait(0.3) do
+            if getgenv().autoocean == true then
+                local A_1 = "ocean"
+                    local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+                Event:FireServer(A_1)
+            end
+        end
+    else
+        getgenv().autoocean = false
+    end
+end)
+AutoBuyEggSection:NewToggle("Auto Candy Egg", "Auto Purchases a Candy egg", function(state)
+    if state then
+        getgenv().autocandy = true
+        while wait(0.3) do
+            if getgenv().autocandy == true then
+                local A_1 = "candy"
+                    local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+                Event:FireServer(A_1)
+            end
+        end
+    else
+        getgenv().autocandy = false
+    end
+end)
+AutoBuyEggSection:NewToggle("Auto Forest Egg", "Auto Purchases a Forest egg", function(state)
+    if state then
+        getgenv().autoforest = true
+        while wait(0.3) do
+            if getgenv().autoforest == true then
+                local A_1 = "forest"
+                    local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+                Event:FireServer(A_1)
+            end
+        end
+    else
+        getgenv().autoforest = false
+    end
+end)
+AutoBuyEggSection:NewToggle("Auto Valentines Egg", "Auto Purchases a Valentines egg", function(state)
+    if state then
+        getgenv().autoval = true
+        while wait(0.3) do
+            if getgenv().autoval == true then
+                local A_1 = "valentines"
+                    local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+                Event:FireServer(A_1)
+            end
+        end
+    else
+        getgenv().autoval = false
+    end
+end)
+AutoBuyEggSection:NewToggle("Auto Storm Egg", "Auto Purchases a Storm egg", function(state)
+    if state then
+        getgenv().autostorm = true
+        while wait(0.3) do
+            if getgenv().autostorm == true then
+                local A_1 = "storm"
+                    local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+                Event:FireServer(A_1)
+            end
+        end
+    else
+        getgenv().autostorm = false
+    end
+end)
+AutoBuyEggSection:NewToggle("Auto Forest Egg", "Auto Purchases a Forest egg", function(state)
+    if state then
+        getgenv().automoon = true
+        while wait(0.3) do
+            if getgenv().automoo == true then
+                local A_1 = "forest"
+                    local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.EggService.Purchase
+                Event:FireServer(A_1)
+            end
+        end
+    else
+        getgenv().automoon = false
+    end
+end)
+TpSection:NewToggle("Flag AutoFarm", "Teleports player to a flag every 7 seconds", function(state)
+    if state then
+        getgenv().autoflags = true
+        while wait(0.3) do
+            if getgenv().autoflags == true then
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(428.125732, 23.7667828, -424.628326)
+                wait(7.3)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(655.642578, 23.7667408, -477.184814)
+                wait(7.3)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(608.588196, 21.0696583, -233.459366)
+                wait(7.3)
+            end
+        end
+    else
+        getgenv().autoflags = false
+    end
+end)
+TpSection:NewToggle("KOTH AutoFarm", "Teleports player to KOTH", function(state)
+    if state then
+        getgenv().autok = true
+        while wait(0.3) do
+            if getgenv().autok == true then
+        wait()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(546.53064, 32.5750542, -173.389252)
+        wait()
+            end
+        end
+    else
+        getgenv().autok = false
+    end
+end)
+ClickEditSection:NewButton("Redeem all codes", "Uses all codes", function()
+local A_1 = "30KLIKES"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.CodeService.Redeem
+Event:InvokeServer(A_1)
+wait()
+local A_1 = "10KLIKES"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.CodeService.Redeem
+Event:InvokeServer(A_1)
+wait()
+local A_1 = "Release"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.CodeService.Redeem
+Event:InvokeServer(A_1)
+wait()
+local A_1 = "ELSA"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.CodeService.Redeem
+Event:InvokeServer(A_1)
+wait()
+local A_1 = "Test"
+local Event = game:GetService("ReplicatedStorage").Aero.AeroRemoteServices.CodeService.Redeem
+Event:InvokeServer(A_1)
+end)
+end
