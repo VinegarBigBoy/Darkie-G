@@ -1,0 +1,40 @@
+
+Basic Script
+
+Info : Use this script if you want script to only work while you are ADSing and shooting at the same time.
+CODE:
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+EnablePrimaryMouseButtonEvents  (true);
+function OnEvent(event,arg)
+    if IsKeyLockOn("numlock")then
+        if IsMouseButtonPressed(3)then
+            repeat
+                if IsMouseButtonPressed(1) then
+                    repeat
+                        MoveMouseRelative(0,1)
+                        Sleep(1,2)
+                    until not IsMouseButtonPressed(1)
+                end
+            until not IsMouseButtonPressed(3)
+        end
+    end
+end
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 
+ Advanced Script
+ 
+ Info : This script will be triggered every time you press "m1", no matter ADS is "on" or "off".
+CODE:
+
+EnablePrimaryMouseButtonEvents(true);
+function OnEvent(event, arg)
+if IsKeyLockOn("numlock")then
+if IsMouseButtonPressed(1) then
+repeat
+MoveMouseRelative(0,1)
+Sleep(1,2)
+until not IsMouseButtonPressed(1)
+end 
+end
+end
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
