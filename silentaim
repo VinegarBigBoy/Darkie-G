@@ -1,7 +1,10 @@
+
 local plrs = game:GetService("Players")
 local plr = plrs.LocalPlayer
 local mouse = plr:GetMouse()
 local camera = game:GetService("Workspace").CurrentCamera
+
+
 function notBehindWall(target)
     local ray = Ray.new(plr.Character.Head.Position, (target.Position - plr.Character.Head.Position).Unit * 300)
     local part, position = game:GetService("Workspace"):FindPartOnRayWithIgnoreList(ray, {plr.Character}, false, true)
@@ -18,7 +21,7 @@ function notBehindWall(target)
         end
     end
 end
- 
+
 function getPlayerClosestToMouse()
     local target = nil
     local maxDist = 100
@@ -48,10 +51,11 @@ function getPlayerClosestToMouse()
     end
     return target
 end
+
 local gmt = getrawmetatable(game)
 setreadonly(gmt, false)
 local oldNamecall = gmt.__namecall
- 
+
 gmt.__namecall = newcclosure(function(self, ...)
     local Args = {...}
     local method = getnamecallmethod()
